@@ -1,21 +1,17 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'; // import React from the 'react package' that's in package.json
 
-class App extends Component {
+import Titles from './components/Titles';
+
+class App extends React.Component { // creates an instance of App that extends React.Component (an object that exists somewhere in node_modules)
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <Titles />
       </div>
     );
   }
-}
+};
+
+
 
 export default App;
