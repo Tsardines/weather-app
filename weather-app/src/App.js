@@ -4,7 +4,13 @@ import Titles from './components/Titles';
 import Form from './components/Form';
 import Weather from './components/Weather';
 
-class App extends React.Component { // creates an instance of App that extends React.Component (an object that exists somewhere in node_modules)
+const API_KEY = "28f1851bcf3dff53a03ebef5540086ff";
+
+class App extends React.Component {
+  getWeather = async () => {
+    const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=Manchester,uk&appid=${API_KEY}&units=imperial`);
+  }
+
   render() {
     return (
       <div>
