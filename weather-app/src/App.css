@@ -1,0 +1,27 @@
+body {
+  background: #9CECFB;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #0052D4, #65C7F7, #9CECFB);
+  background: linear-gradient(to top, #0052D4, #65C7F7, #9CECFB);
+  background-repeat: no-repeat;
+  display: flex;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  justify-content: center;
+  padding-top: 12%;
+  text-align: center;
+}
+
+.Titles h1 {
+  font-size: 50px;
+}
+
+.Titles p {
+  font-size: 28px;
+}
+
+.Weather {
+  font-size: 30px;
+}
+
+.Weather:hover {
+  color: blue;
+}

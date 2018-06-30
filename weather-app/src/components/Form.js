@@ -1,10 +1,11 @@
 import React from 'react';
+import { Field, Label, Control, Input } from 'bloomer';
 
 const Form = props => (
   <form onSubmit={props.getWeather}>
-    <input type="text" name="city" placeholder="City..."/>
-    <input type="text" name="country" placeholder="Country..."/>
-    <button>Get Weather</button>
+    <Control><Input type="text" name="city" placeholder="City"/></Control>
+    <Control><Input type="text" name="country" placeholder="Country"/></Control>
+    <Control><button>Get Weather</button></Control>
   </form>
 )
 

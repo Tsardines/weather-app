@@ -1,4 +1,5 @@
 import React from 'react'; // import React from the 'react package' that's in package.json
+import Bloomer from 'bloomer';
 
 import Titles from './components/Titles';
 import Form from './components/Form';
@@ -42,7 +43,7 @@ class App extends React.Component {
         country: undefined,
         humidity: undefined,
         description: undefined,
-        error: "Please enter your information."
+        error: "Aye, you're missin' stuff."
       });
     }
   }
@@ -50,16 +51,24 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Titles />
+
+        <div className="Titles">
+          <Titles />
+        </div>
+
         <Form getWeather={this.getWeather} />
-        <Weather
-          temperature={this.state.temperature}
-          city={this.state.city}
-          country={this.state.country}
-          humidity={this.state.humidity}
-          description={this.state.description}
-          error={this.state.error}
-          />
+
+        <div className="Weather">
+          <Weather
+            temperature={this.state.temperature}
+            city={this.state.city}
+            country={this.state.country}
+            humidity={this.state.humidity}
+            description={this.state.description}
+            error={this.state.error}
+            />
+        </div>
+
       </div>
     );
   }
