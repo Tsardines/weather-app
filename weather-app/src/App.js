@@ -15,6 +15,7 @@ class App extends React.Component {
     clouds: undefined,
     humidity: undefined,
     description: undefined,
+    icon: undefined,
     error: undefined
   }
 
@@ -33,6 +34,7 @@ class App extends React.Component {
         clouds: data.clouds.all,
         humidity: data.main.humidity,
         description: data.weather[0].description,
+        icon: data.weather.icon, // weather[1]
         error: ""
       });
     } else {
@@ -42,6 +44,7 @@ class App extends React.Component {
         clouds: undefined,
         humidity: undefined,
         description: undefined,
+        icon: undefined,
         error: "Aye, yer missin' stuff."
       });
     }
@@ -66,6 +69,7 @@ class App extends React.Component {
             clouds={this.state.clouds}
             humidity={this.state.humidity}
             description={this.state.description}
+            icon={this.state.icon}
             error={this.state.error}
             />
         </div>
@@ -74,7 +78,6 @@ class App extends React.Component {
     );
   }
 };
-
 
 
 export default App;
