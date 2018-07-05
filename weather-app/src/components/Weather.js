@@ -3,9 +3,9 @@ import { Box, Container } from 'bloomer';
 
 const Weather = (props) => (
   <Container>
-    { props.city && <Box>Location: { props.city }</Box>                                                     }
+    { props.city && <Box>Location: { props.city }</Box>                                                   }
     { props.temperature && <Box>Temperature: { props.temperature }°F</Box>                                }
-    { props.clouds && <Box>Clouds: { props.clouds }</Box>                                                 }
+    { props.clouds && <Box>Cloud coverage: { props.clouds }%</Box>                                        }
     { props.humidity && <Box>Humidity: { props.humidity }%</Box>                                          }
     { props.description && <Box>Conditions: { props.description }</Box>                                   }
     { props.error && <Box>{ props.error }</Box>                                                           }

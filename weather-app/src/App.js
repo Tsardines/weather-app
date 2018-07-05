@@ -63,7 +63,7 @@ class App extends React.Component {
           <Weather
             temperature={this.state.temperature}
             city={this.state.city}
-            country={this.state.country}
+            clouds={this.state.clouds}
             humidity={this.state.humidity}
             description={this.state.description}
             error={this.state.error}
