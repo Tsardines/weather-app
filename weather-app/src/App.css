@@ -1,13 +1,16 @@
 body {
-  background: #9CECFB;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #0052D4, #65C7F7, #9CECFB);
-  background: linear-gradient(to top, #0052D4, #65C7F7, #9CECFB);
-  background-repeat: no-repeat;
+  background: #6F59FA;  /* fallback for old browsers */
+  /* background: -webkit-linear-gradient(to top, #0052D4, #65C7F7, #9CECFB);
+  background: linear-gradient(to top, #0052D4, #65C7F7, #9CECFB); */
+  background-repeat: repeat;
   display: flex;
   font-family: 'Fira Sans Condensed', sans-serif;
-  justify-content: center;
   padding-top: 12%;
   text-align: center;
+}
+
+.Form {
+  display: inline;
 }
 
 .Titles h1 {

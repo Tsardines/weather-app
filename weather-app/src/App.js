@@ -1,5 +1,5 @@
 import React from 'react'; // import React from the 'react package' that's in package.json
-import Bloomer from 'bloomer';
+// import Bloomer from 'bloomer';
 
 import Titles from './components/Titles';
 import Form from './components/Form';
@@ -12,7 +12,7 @@ class App extends React.Component {
   state = {
     temperature: undefined,
     city: undefined,
-    country: undefined,
+    clouds: undefined,
     humidity: undefined,
     description: undefined,
     error: undefined
@@ -21,17 +21,16 @@ class App extends React.Component {
   getWeather = async (e) => {
     e.preventDefault(); // prevent default behavior of component (prevents full page refresh)
 
-    const city = e.target.elements.city.value;
-    const country = e.target.elements.country.value;
+    const zip = e.target.elements.zip.value;
 
-    const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=imperial`);
+    const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${zip},us&appid=${API_KEY}&units=imperial`);
     const data = await api_call.json(); // converts API call to json format
 
-    if (city && country) { // if city & country are present, code will run
+    if (zip) { // if zip is present, code will run
       this.setState({
         temperature: data.main.temp,
         city: data.name,
-        country: data.sys.country,
+        clouds: data.clouds.all,
         humidity: data.main.humidity,
         description: data.weather[0].description,
         error: ""
@@ -40,10 +39,10 @@ class App extends React.Component {
       this.setState({
         temperature: undefined,
         city: undefined,
-        country: undefined,
+        clouds: undefined,
         humidity: undefined,
         description: undefined,
-        error: "Aye, you're missin' stuff."
+        error: "Aye, yer missin' stuff."
       });
     }
   }
@@ -56,7 +55,9 @@ class App extends React.Component {
           <Titles />
         </div>
 
-        <Form getWeather={this.getWeather} />
+        <div className="Form">
+          <Form getWeather={this.getWeather} />
+        </div>
 
         <div className="Weather">
           <Weather
