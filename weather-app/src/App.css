@@ -3,6 +3,7 @@ body {
   /* background: -webkit-linear-gradient(to top, #0052D4, #65C7F7, #9CECFB);
   background: linear-gradient(to top, #0052D4, #65C7F7, #9CECFB); */
   background-repeat: repeat;
+  color: white;
   display: flex;
   font-family: 'Fira Sans Condensed', sans-serif;
   padding-top: 12%;
@@ -10,11 +11,11 @@ body {
 }
 
 .Form {
-  display: inline;
+  display: run-in;
 }
 
-.Titles h1 {
-  font-size: 50px;
+.Titles {
+  font-size: 70px;
 }
 
 .Titles p {
@@ -26,5 +27,5 @@ body {
 }
 
 .Weather:hover {
-  color: blue;
+  color: turquoise;
 }

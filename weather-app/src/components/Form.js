@@ -1,16 +1,18 @@
 import React from 'react';
-import { Field, Control, Input } from 'bloomer';
+import { Button, FormGroup, Label } from 'reactstrap';
+import { Field, Input, Control } from 'bloomer';
 
 const Form = props => (
   <Field isHorizontal>
     <form onSubmit={props.getWeather}>
-
+<Form>
+      <FormGroup>
+        <Label for="zip">Enter zipcode</Label>
+        <Input type="zip" name="zip" id="zip" placeholder="" />
+      </FormGroup>
+</Form>
       <Control>
-        <Input type="text" name="zip" placeholder="zipcode"/>
-      </Control>
-      
-      <Control>
-        <button>Get Weather</button>
+        <Button color='warning' size='sm'>Get Weather</Button>
       </Control>
 
     </form>
